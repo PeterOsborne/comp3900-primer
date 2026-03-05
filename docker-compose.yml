@@ -23,17 +23,17 @@ services:
       DB_USER: marksuser
       DB_PASSWORD: markspass
     ports:
-      - "5001:5000"
+      - "5000:5000"
 
   frontend:
     build:
       context: ./frontend
       args:
-        VITE_API_URL: http://localhost:5001
+        VITE_API_URL: http://localhost:5000
     depends_on:
       - backend
     ports:
-      - "8081:80"
+      - "8080:80"
 
   automark:
     build: ./automark
