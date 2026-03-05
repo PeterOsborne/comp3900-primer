@@ -137,7 +137,7 @@ def get_stats():
     marks = [s.get("mark") for s in students if s.get("mark") is not None]
 
     if not marks:
-        # Edge-case choice: empty set -> zeros/nulls but still 200
+        # Edge-case choice: empty set -> zeros but still 200
         return jsonify({"count": 0, "average": 0, "min": 0, "max": 0}), 200
 
     count = len(marks)

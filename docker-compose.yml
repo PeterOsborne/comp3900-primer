@@ -33,7 +33,6 @@ services:
     depends_on:
       - backend
     ports:
-      # nginx listens on 80 in the container; expose on 8080 on your laptop
       - "8081:80"
 
   automark:
