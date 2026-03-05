@@ -1,5 +1,4 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=22872483&assignment_repo_type=AssignmentRepo)
-
 # Student Grading System – Primer
 
 **This is an individual exercise.**
@@ -224,9 +223,22 @@ docker compose up --build
 At any time after Part 2, you can run the public tests:
 
 ```bash
-docker compose --profile debug up --build automark
+docker compose --profile debug up --build automark --remove-orphans
 ```
 
 You must see **`SANITY CHECK PASSED`**. These tests check: backend health, database connectivity, list of students, `/stats` response shape, and that creating a student persists.
 
 These are only basic tests, you must ensure you add proper error handling/validation according to the spec for full marks. A private test suite will be run on the deadline.
+
+## What to show your tutor
+
+In your week 3 lab, you must do the following:
+1. Pull and merge in the latest repo changes (autotest.py file)
+
+#### Docker and python
+2. Run the autotest command (added --remove-orphans flag to cleanup old containers) and show this to your tutor
+
+3. Explain the edge case you addressed and your implementation which you should've documented in `EDGE_CASE.md`
+
+#### Git
+4. Show your pull request on github from your private repo to your tutor
